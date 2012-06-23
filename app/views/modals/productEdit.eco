@@ -1,0 +1,20 @@
+
+<div class="modal-header">
+  <h2>Edit <%= @name %></h2>
+</div>
+
+
+<div class="modal-body">
+  <div class="label">
+    Coming Soon
+  </div>
+</div>
+
+<div class="modal-footer">
+  <a class="btn btn-primary show_on_error js_close">Ok</a>
+</div>
+
+
+
+
+

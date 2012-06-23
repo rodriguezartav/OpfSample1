@@ -1,0 +1,31 @@
+<tr data-id="<%= @id %>">
+    <td><%= @name %></td>
+    <td class="center"><%= @code %></td>
+    <td class="order center">
+        <select class="input-small" name="data[order][1]">
+            <option value=""></option>
+            <option selected="selected" value="1">CTP-21</option>
+            <option value="2">CTP-2</option>
+            <option value="3">EXL-31</option>
+            <option value="4">EXL-32</option>
+            <option value="5">EXL-33</option>
+            <option value="6">INT-L1</option>
+            <option value="7">INT-L3</option>
+            <option value="8">INT-L2</option>
+        </select>
+    </td>
+    <td  class="center">    
+        <% level =  Math.random() * 100 %>
+        <% color =  if level > 50 then 'success' else 'danger' %>
+        <div class="progress progress-<%= color %>">
+            <div class="bar" style="width: <%= level %>%;"></div>
+        </div>
+    </td>
+
+    <td class="center center">
+        <a class="btn btn-info edit"  data-original-title="Deploy"><i class="icon-pencil"></i></a>
+        <a onclick="return confirm('Are you sure ?');" class="btn btn-warning delete" href="#" data-original-title="Delete"><i class="icon-remove icon-white"></i></a>                       
+    </td>
+
+
+</tr>
