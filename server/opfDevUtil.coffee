@@ -1,6 +1,5 @@
 fs = require('fs')
 
-
 class OpfDevUtil
 
   @setupCompilers: (app) ->
@@ -16,9 +15,11 @@ class OpfDevUtil
       fs.readFile path, "utf8" , (err, data) =>
         throw err if err 
         parser.parse data, (err, css) ->
-          throw err if err 
           res.header("Content-type", "text/css");
-          res.send(css.toCSS())
+          if err
+            res.send ""
+          else  
+            res.send(css.toCSS())
     
   
 
