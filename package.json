@@ -1,6 +1,10 @@
 {
-  "name": "app",
+  "name": "OpfSample1",
   "version": "0.0.1",
+  "engines": {
+    "node": "~0.6.6",
+    "npm" : "~1.0.106"
+  },
   "dependencies": { 
     "hem"           :  "0.1.6",
     "es5-shimify"   :  "~0.0.1",
